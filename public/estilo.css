@@ -1,0 +1,88 @@
+/* SITE */
+
+* {
+box-sizing: border-box;
+text-decoration: none;
+color: #ff406966;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+background: white;
+}
+
+/* LINKS */
+
+a:active {
+color: red;
+}
+
+a:houver {
+color: orange;
+}
+
+/* CABEÇALHO DO SITE */
+
+.cabecalho {	
+padding: 3%;
+border: 3px solid #ff4069;
+border-radius: 10px;
+background: #ff40691c;
+}
+
+.cabecalho_logo {
+height: 20px;
+vertical-align: text-bottom;
+}
+
+.cabecalho_item {
+padding: 3%;
+text-decoration: none;
+color: #ff4069;
+}
+
+.cabecalho_item_selecionado {
+padding: 3%;
+text-decoration: none;
+color: #ff4069;
+border: 3px solid #ff4069;
+border-radius: 10px;
+background: white;
+}
+
+/* CONTEÚDO DO SITE */
+
+.conteudo {
+padding-right: 40px;
+padding-left: 40px;
+text-align: justify;
+}
+
+h1 {
+color: #ff4069;
+}
+
+h3 {
+color: #ff406991;
+}
+
+.coiso {
+padding: 3%;
+border: 3px solid red;
+border-radius: 10px;
+text-align: center;
+}
+
+.cadastro_campo {
+padding: 2%;
+background: white;
+border: 3px solid #ff4069;
+border-radius: 10px;
+color: black;
+}
+
+.cadastro_botao {
+background: white;
+border: 3px solid #ff4069;
+border-radius: 10px;
+}
