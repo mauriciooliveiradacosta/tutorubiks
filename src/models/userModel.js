@@ -16,8 +16,17 @@ function getUserById(id){
     if(users.has(id)) return users.get(id)
     else return null
 }
+//need to create a better checking for when user already exists
+function createUser(user){
+    if(!user.id || users.has(user.id)){
+        return null
+    }
+    users.set(user.id, user)
+    return users.get(user.id)
+}
 
 module.exports = {
     getAllUsers,
-    getUserById
+    getUserById,
+    createUser
 }
