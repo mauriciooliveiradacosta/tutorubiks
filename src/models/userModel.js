@@ -1,28 +1,23 @@
-const users = new Map()
+const userModel = require('./userSchema.js')
 
-const user = {
-    id: 1,
-    name: 'anna',
-    gender: 'F'
+async function getAllUsers(){
+    return await userModel.find({})
 }
-
-users.set(user.id, user)
-
-function getAllUsers(){
-    const allUsers = Array.from(users.values()) || []
-    return allUsers
-}
-function getUserById(id){
-    if(users.has(id)) return users.get(id)
-    else return null
+async function getUserById(userId){
+    const user = await userModel.find({id: userId})
+    return user? user: null
 }
 //need to create a better checking for when user already exists
-function createUser(user){
-    if(!user.id || users.has(user.id)){
+async function createUser(user){
+    if(!user.id || !user.password || !user.name){
         return null
     }
-    users.set(user.id, user)
-    return users.get(user.id)
+    await userModel.create({
+        id: user.id,
+        username: user.name,
+        password: user.password
+    })
+    return await userModel.find({id:user.id, username: user.name})
 }
 
 module.exports = {
